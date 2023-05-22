@@ -14,12 +14,12 @@ from datahub_actions.transform.transformer import Transformer
 logger = logging.getLogger(__name__)
 
 
-class ExtractTransformerConfig(ConfigModel):
+class AmplitudeEventTransformerConfig(ConfigModel):
     event_type: Union[str, List[str]]
     event: Optional[Dict[str, Any]]
 
 
-class ExtractTransformer(Transformer):
+class AmplitudeEventTransformer(Transformer):
     def __init__(self, ctx: PipelineContext):
         self.ctx = ctx
 

@@ -33,9 +33,9 @@ class AmplitudeEventPropertyAction(Action):
 
     def act(self, event: EventEnvelope) -> None:
         event_json = json.loads(event.as_json())
-        event_type = event_json.get("meta").get("amplitude").get("amp_event")
-        event_property = event_json.get("meta").get("amplitude").get("event_property")
-        description = event_json.get("meta").get("amplitude").get("description")
+        event_type = event_json["meta"]["amplitude"]["amp_event"]
+        event_property = event_json["meta"]["amplitude"]["event_property"]
+        description = event_json["meta"]["amplitude"]["description"]
 
         data = {"event_type": event_type, "description": description}
 

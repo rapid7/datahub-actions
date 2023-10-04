@@ -8,11 +8,8 @@ from pydantic import BaseModel, Field
 from datahub_actions.action.action import Action
 from datahub_actions.event.event_envelope import EventEnvelope
 from datahub_actions.pipeline.pipeline_context import PipelineContext
-from datahub_actions.plugin.transform.extract.dataset.query import (
-    build_update_desc_mutation_query,
-    build_mutation_body,
-    build_schema_docu_mutation_query
-)
+from datahub_actions.plugin.action.dataset.query import build_schema_docu_mutation_query
+
 
 
 class SchemaDocumentationPropagationActionConfig(ConfigModel):

@@ -4,8 +4,8 @@ import re
 from typing import Dict, List, Optional
 
 import deepdiff
-from datahub.configuration.common import AllowDenyPattern
 
+from datahub.configuration.common import AllowDenyPattern
 from datahub_actions.event.event_registry import MetadataChangeLogEvent
 
 
